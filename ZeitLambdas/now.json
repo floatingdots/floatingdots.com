@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "floatingdots.com lambda",
+  "alias": "api.floatingdots.com",
+  "builds": [
+      { "src": "index.js", "use": "@now/node-server" }
+  ],
+  "routes": [
+    { "src": "/v1/(.*)", "dest": "index.js" }
+  ],
+  "env": {
+    "POSTMARK_ACCESSTOKEN": "@fd-postmark-accesstoken",
+    "EMAIL_RECEIVER": "@fd-email-receiver",
+    "EMAIL_SENDER": "@fd-email-sender"
+  }
+}

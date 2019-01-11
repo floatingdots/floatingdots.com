@@ -1,0 +1,76 @@
+{
+  "name": "floatingdots.com",
+  "version": "1.0.0",
+  "description": "floatingdots.com",
+  "author": "Naoto Yoshimoto <n@floatingdots.com>",
+  "private": true,
+  "scripts": {
+    "now-build": "nuxt generate",
+    "build:netlify": "yarn && nuxt generate",
+    "deploy:production": "nuxt generate && cd dist && now && now alias floatingdots.com",
+    "deploy:staging": "nuxt generate && cd dist && now && now alias staging.floatingdots.com",
+    "dev": "HOST=0.0.0.0 nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "analyze": "nuxt generate --analyze",
+    "test": "jest",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^vue$": "vue/dist/vue.common.js"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.3.0",
+    "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/sitemap": "^0.1.1",
+    "@sanity/block-content-to-html": "^1.3.8",
+    "@sanity/client": "^0.136.0",
+    "@sanity/image-url": "^0.138.0",
+    "basic-auth": "^2.0.1",
+    "block-content-to-vue": "^0.1.0",
+    "cross-env": "^5.2.0",
+    "element-ui": "^2.4.10",
+    "image-size": "^0.6.3",
+    "lazysizes": "^4.1.4",
+    "node-sass": "^4.10.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.3.2",
+    "nuxt-i18n": "^5.4.4",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "sanity-blocks-vue-component": "^0.1.0",
+    "sass-loader": "^7.1.0",
+    "vee-validate": "^2.1.3",
+    "vue": "^2.5.17",
+    "vue-googlemaps": "^0.1.1",
+    "vue-recaptcha": "^1.1.1",
+    "vue-svg-loader": "^0.11.0",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.25",
+    "axios": "^0.18.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-vue": "^5.1.0",
+    "gsap": "^2.0.2",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.15.3"
+  }
+}

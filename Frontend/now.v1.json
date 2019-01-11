@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "name": "floatingdots",
+  "type": "static",
+  "alias": [
+    "floatingdots.com"
+  ],
+  "files": ["dist"],
+  "static": {
+    "public": "dist",
+    "headers": [
+      {
+        "source" : "**/*.@(jpg|jpeg|gif|png|svg|ico|ttf|woff)",
+        "headers" : [{
+          "key" : "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }]
+      },
+      {
+        "source": "_nuxt/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "sw.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store"
+          }
+        ]
+      }
+    ],
+    "directoryListing": false,
+    "trailingSlash": false
+  }
+}

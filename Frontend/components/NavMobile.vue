@@ -1,0 +1,76 @@
+<template>
+  <nav :class="{ active: $store.state.isMobileNav }" class="mobile">
+    <div class="inner">
+      <ul class="links">
+        <li
+          v-for="item in $t('nav')"
+          :key="item.herf"
+          class="item"
+          @click="$store.commit('closeMobileNav')"
+        >
+          <nuxt-link :to="localePath(item.href)"> {{ item.title }} </nuxt-link>
+        </li>
+      </ul>
+      <LangSwitcher />
+    </div>
+  </nav>
+</template>
+
+<script>
+import LangSwitcher from '@/components/LangSwitcher/Nav'
+
+export default {
+  components: {
+    LangSwitcher,
+  },
+}
+</script>
+
+<style lang="sass" scoped>
+nav.mobile
+  z-index: 90
+  opacity: 0
+  background: rgba(255,255,255,0.98)
+  position: fixed
+  top: 64px
+  left: 0
+  width: 100%
+  height: calc(100vh - 64px)
+  overflow: hidden
+  overflow-y: auto
+  padding: 0 $spacing-mobile
+  padding-bottom: 4rem
+  pointer-events: none
+  transition: all 200ms ease-out 0ms
+  &.active
+    opacity: 1
+    pointer-events: auto
+    transition: all 200ms ease-out 40ms
+  ul
+    list-style: none
+    margin: 8rem 0 0 0
+    padding: 0
+    text-align: right
+  li:not(:last-child)
+    margin: 0 0 4.0rem 0
+  a
+    color: $black
+    text-decoration: none
+    display: block
+    font-size: 3.2rem
+    font-weight: 500
+    line-height: 1
+  ul.lang-switcher
+    margin-top: 8rem
+div.divider
+  width: 100%
+  padding: 0.8rem 0
+
+@media only screen and (min-width: 48em)
+  nav.mobile
+    .inner
+      max-width: 1024px
+      margin: 0 auto
+      padding: 0 32px
+      display: block
+</style>

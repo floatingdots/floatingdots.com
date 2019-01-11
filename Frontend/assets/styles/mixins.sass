@@ -1,0 +1,40 @@
+=font($ff: false, $size: false, $weight: false, $lh: false, $ls: false)
+  @if $ff { font-family: $ff }
+  @if $size { font-size: $size }
+  @if $weight { font-weight: $weight }
+  @if $lh { line-height: $lh }
+  @if $ls { letter-spacing: $ls}
+
+=arrow($size: 8, $width: 2, $color: $black)
+  display: inline-block
+  position: relative
+  margin-right: $size*2+px
+  &:after
+    position: absolute
+    top: -$size*1.5+1+px
+    right: -$size*1.5+px
+    content: ''
+    display: block
+    width: $size+px
+    height: $size+px
+    border: solid $color
+    border-width: 0 $width+px $width+px 0
+    transform: rotate(315deg)
+    border-radius: 1px
+
+=arrowPrev($size: 8, $width: 2,  $color: $black)
+  display: inline-block
+  position: relative
+  margin-right: $size*2+px
+  &:after
+    position: absolute
+    top: -$size*1.5+1+px
+    right: -$size*1.5+px
+    content: ''
+    display: block
+    width: $size+px
+    height: $size+px
+    border: solid $color
+    border-width: $width+px 0 0 $width+px
+    transform: rotate(315deg)
+    border-radius: 1px

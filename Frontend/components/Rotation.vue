@@ -1,0 +1,138 @@
+<template>
+  <ul class="message">
+    <li ref="delay0" class="item">Products📱</li>
+    <li ref="delay1" class="item">Team 🐶🐹</li>
+    <li ref="delay2" class="item">Services 🍜</li>
+    <li ref="delay3" class="item">Company 🏢</li>
+  </ul>
+</template>
+
+<script>
+import { TimelineMax, Linear } from 'gsap'
+
+export default {
+  mounted() {
+    this.bang()
+  },
+  methods: {
+    bang() {
+      const { delay0, delay1, delay2, delay3 } = this.$refs
+      const timeline = new TimelineMax({ repeat: -1 })
+      const inDuration = 0.25
+      const outDuration = 0.25
+      const time = 0.7
+      const inY = 5
+      const outY = -10
+      timeline
+        .fromTo(
+          delay0,
+          inDuration,
+          {
+            y: inY,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            ease: Linear.EaseInOut,
+          }
+        )
+        .to(delay0, outDuration, {
+          y: outY,
+          opacity: 0,
+          delay: time,
+          ease: Linear.EaseInOut,
+        })
+        .fromTo(
+          delay1,
+          inDuration,
+          {
+            y: inY,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            ease: Linear.EaseInOut,
+          }
+        )
+        .to(delay1, outDuration, {
+          y: outY,
+          opacity: 0,
+          delay: time,
+          ease: Linear.EaseInOut,
+        })
+        .fromTo(
+          delay2,
+          inDuration,
+          {
+            y: inY,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            ease: Linear.EaseInOut,
+          }
+        )
+        .to(delay2, outDuration, {
+          y: outY,
+          opacity: 0,
+          delay: time,
+          ease: Linear.EaseInOut,
+        })
+        .fromTo(
+          delay3,
+          inDuration,
+          {
+            y: inY,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            ease: Linear.EaseInOut,
+          }
+        )
+        .to(delay3, outDuration, {
+          y: outY,
+          opacity: 0,
+          delay: time,
+          ease: Linear.EaseInOut,
+        })
+      timeline.play()
+    },
+  },
+}
+</script>
+
+<style lang="sass" scoped>
+.item
+  opacity: 0
+  position: absolute
+</style>
+
+<style lang="sass">
+.animation
+  animation: animate 4000ms ease-in-out 0ms infinite
+
+@keyframes animate
+  0%
+    opacity: 0
+  5%
+    opacity: 0
+    transform: translateY(-5px)
+  10%
+    opacity: 1
+    transform: translateY(0px)
+  25%
+    opacity: 1
+    transform: translateY(0px)
+  30%
+    opacity: 0
+    transform: translateY(10px)
+  80%
+    opacity: 0
+  100%
+    opacity: 0
+</style>

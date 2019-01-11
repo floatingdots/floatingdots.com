@@ -1,0 +1,48 @@
+defaults: &defaults
+  docker:
+    - image: 'circleci/node:latest'
+  working_directory: ~/tmp/circlci-now
+version: 2
+jobs:
+  checkout:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/tmp/circlci-now
+      - restore_cache:
+          keys:
+            - 'yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}'
+            - 'yarn-cache-{{ .Branch }}'
+            - yarn-cache-
+      - run: yarn install
+      - save_cache:
+          key: 'yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}'
+          paths: node_modules
+      - persist_to_workspace:
+          root: .
+          paths: .
+  deploy_frontend:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/tmp/circlci-now
+      - run: sudo yarn global add now
+      - deploy:
+          name: Deploy & Alias
+          command: |
+            cd Frontend
+            echo ${ENV} | base64 --decode > .env
+            now -f -t ${ZEIT_TOKEN} --team floatingdots
+            now alias -t ${ZEIT_TOKEN} --team floatingdots
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - checkout
+      - deploy_frontend:
+          requires:
+            - checkout
+          filters:
+            branches:
+              only: master

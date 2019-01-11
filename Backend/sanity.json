@@ -1,0 +1,48 @@
+{
+  "root": true,
+  "project": {
+    "name": "Floating Dots"
+  },
+  "api": {
+    "projectId": "5ckaios9",
+    "dataset": "production"
+  },
+  "__experimental_spaces": [
+    {
+      "title": "Production",
+      "name": "production",
+      "default": true,
+      "api": {
+        "dataset": "production"
+      }
+    },
+    {
+      "title": "Dev",
+      "name": "dev",
+      "api": {
+        "dataset": "dev"
+      }
+    }
+  ],
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/vision",
+    "@sanity/google-maps-input",
+    "@sanity/production-preview"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveProductionUrl.js"
+    }
+  ]
+}
+

@@ -1,0 +1,27 @@
+{
+  "name": "floatingdots.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "now-build": "cd Frontend && yarn && yarn run generate",
+    "dev": "run-p -l frontend backend ngrok",
+    "dev:withoutNgrok": "run-p -l frontend backend",
+    "deploy:production": "cd Frontend && now && now alias",
+    "deploy:staging": "cd Frontend && now && now alias staging.floatingdots.com",
+    "frontend": "cd Frontend && yarn run dev",
+    "backend": "cd Backend && yarn start",
+    "ngrok": "ngrok start floatingdots.com",
+    "build": "cd Frontend && yarn run build",
+    "start": "cd Frontend && yarn run start",
+    "generate": "cd Frontend && yarn run generate",
+    "test": "cd Frontend && jest",
+    "lint": "cd Frontend && eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "cd Frontend && eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}
