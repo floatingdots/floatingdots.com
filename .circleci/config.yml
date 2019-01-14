@@ -25,6 +25,7 @@ jobs:
   deploy_frontend:
     <<: *defaults
     steps:
+      - checkout
       - attach_workspace:
           at: ~/tmp/circlci-now
       - run: sudo yarn global add now
