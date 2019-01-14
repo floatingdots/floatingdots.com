@@ -37,7 +37,7 @@ jobs:
             now alias -t ${ZEIT_TOKEN} --team floatingdots
 workflows:
   version: 2
-  deploy:
+  frontend:
     jobs:
       - checkout
       - deploy_frontend:
