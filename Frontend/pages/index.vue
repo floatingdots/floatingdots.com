@@ -2,7 +2,7 @@
   <div class="container">
     <section class="intro">
       <span class="heading">
-        <span class="top"> Design to improve </span>
+        <span class="top">Design grow</span>
         <span class="bottom">
           <span class="your"> your </span>
           <Rotation />
@@ -139,30 +139,30 @@
               :sizes="{
                 l: {
                   media: 1024,
-                  width: 1200,
-                  height: 300,
+                  width: 1024,
+                  height: 360,
                 },
                 m: {
                   media: 768,
-                  width: 800,
+                  width: 768,
                   height: 300,
                 },
                 s: {
                   media: 0,
                   width: 400,
-                  height: 300,
+                  height: 250,
                 },
               }"
               :alt="post.thumbnail.alt"
               role="presentation"
-              fit="clip"
+              fit="crop"
             />
             <span class="title"> {{ post.title[$i18n.locale] }} </span>
           </NuxtLink>
-          <hr />
         </li>
       </ul>
     </section>
+    <hr />
     <Contact />
   </div>
 </template>
@@ -222,27 +222,27 @@ export default {
     display: block
     margin: 4.8rem 0 0 0
     letter-spacing: 0.05rem
-    span
-      display: block
-      line-height: 1
-    .top
-      font-size: 2.6rem
-      font-weight: 700
-    .bottom
-      margin-top: 0.2rem
-      font-size: 3.6rem
-      font-weight: 700
-      display: flex
-      flex-direction: row
-    .your
-      margin-right: 0.8rem
-      display: inline-block
-    .message
-      position: relative
-      white-space: nowrap
-  .title
+  span
+    display: block
+    line-height: 1
+  .top
+    font-size: 2.6rem
+    font-weight: 700
+  .bottom
+    margin-top: 0.2rem
+    font-size: 3.6rem
+    font-weight: 700
+    display: flex
+    flex-direction: row
+  .your
+    margin-right: 0.8rem
+    display: inline-block
+  .message
+    position: relative
+    white-space: nowrap
+.title
     +font-mobile-base
-    line-height: 1.5
+    line-height: 1.2
     margin-bottom: 5.6rem
 
 .projects
@@ -303,19 +303,22 @@ export default {
     margin: 1.6rem 0
 
 @media only screen and (min-width: 48em)
+  .sectionTitle
+    +font-desktop-huge
   .intro
     .heading
       margin-bottom: 2.4rem
-      .top
-        font-size: 4rem
-      .bottom
-        font-size: 8rem
-        font-weight: 700
-        margin-top: -1rem
-    .title
-      +font-desktop-medium
-      line-height: 1.2
-
+    .top
+      font-size: 4rem
+    .bottom
+      font-size: 8rem
+      font-weight: 700
+      margin-top: -1rem
+    .your
+      margin-right: 1.6rem
+  .title
+    +font-desktop-base
+    line-height: 1.4
   .projects
     .posts
       .post

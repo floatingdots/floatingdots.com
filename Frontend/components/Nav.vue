@@ -16,7 +16,6 @@ export default {
   components: {
     Logo,
   },
-  mounted() {},
   methods: {
     scrollTop() {
       setTimeout(() => {
