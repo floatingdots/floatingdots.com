@@ -1,4 +1,7 @@
 module.exports = {
+  back: 'Back',
+  backToBlogList: 'Back to blog list',
+  backToHome: 'Back to home',
   contactus: 'Contact Us',
   nav: {
     studio: {
@@ -10,10 +13,10 @@ module.exports = {
       title: 'Projects',
       hash: '#projects',
     },
-    // blog: {
-    //   href: 'blog',
-    //   title: 'Blog',
-    // },
+    blog: {
+      href: 'blog',
+      title: 'Blog',
+    },
     contact: {
       href: 'contact',
       title: 'Contact',
