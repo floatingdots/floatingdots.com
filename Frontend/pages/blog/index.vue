@@ -5,7 +5,7 @@
       <span class="sectionTitle"> Blog </span>
       <ul class="posts">
         <li v-for="(post, i) in posts" :key="i" class="post">
-          <NuxtLink
+          <nuxt-link
             :to="{
               name: `blog-slug___${$i18n.locale}`,
               params: { slug: post.slug.current },
@@ -41,7 +41,7 @@
               fit="crop"
             />
             <span class="title"> {{ post.title[$i18n.locale] }} </span>
-          </NuxtLink>
+          </nuxt-link>
         </li>
       </ul>
     </section>
