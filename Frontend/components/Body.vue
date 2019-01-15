@@ -1,5 +1,5 @@
 <template>
-  <div class="content"><div v-html="bodyHtml" /></div>
+  <div class="content--bodyHtml" v-html="bodyHtml" />
 </template>
 
 <script>
@@ -27,13 +27,27 @@ export default {
     bodyHtml() {
       return blocksToHtml({
         blocks: this.content[this.$i18n.locale],
-        serializers: { types: { image: this.ImageRender } },
+        serializers: {
+          types: { image: this.ImageRender },
+          marks: { link: this.link },
+        },
         dataset: sanity.clientConfig.dataset,
         projectId: sanity.clientConfig.projectId,
       })
     },
   },
   methods: {
+    link(props) {
+      if (props.mark.blank) {
+        return h(
+          'a',
+          { href: props.mark.href, target: '_blank', rel: 'nofollow,noopener' },
+          props.children
+        )
+      } else {
+        return h('a', { href: props.mark.href }, props.children)
+      }
+    },
     ImageRender(props) {
       return h('picture', {}, [
         h('source', {
@@ -71,12 +85,16 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.content
-  max-width: 960px
+<style lang="sass">
+.content--bodyHtml
   margin: 0 auto
   p,a,span,ul,li
     +font-mobile-base
   p
     margin: 0 0 4rem 0
+@media only screen and (min-width: 48em)
+  .content--bodyHtml
+    max-width: 720px
+    p,a,span,ul,li
+      +font-desktop-base
 </style>
