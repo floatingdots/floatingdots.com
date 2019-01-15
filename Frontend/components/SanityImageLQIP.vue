@@ -31,7 +31,7 @@
             )}`
           "
           class="lazyload"
-          alt="image with artdirection"
+          :alt="alt"
         />
       </picture>
     </div>
@@ -41,7 +41,7 @@
 .mediabox
   transition: padding-bottom 200ms
   position: relative
-  background-color: #eee
+  background-color: #cdcdcd
   width: 100%
   picture,
   img
@@ -169,13 +169,11 @@ export default {
       for (const i in sizes) {
         if (sizes[i].height && sizes[i].width && this.windowWidth >= sizes[i].media) {
           this.paddingB = (sizes[i].height / sizes[i].width) * 100
-          // console.log(this.paddingB, sizes[i].media * 10)
           return
         }
       }
       if (this.h && this.w) {
         this.paddingB = (this.h / this.w) * 100
-        // console.log(this.paddingB)
       }
     },
     escapedUrl(url) {

@@ -1,9 +1,9 @@
 <template>
-  <ul class="message">
-    <li ref="delay0" class="item">Products📱</li>
-    <li ref="delay1" class="item">Team 🐶🐹</li>
-    <li ref="delay2" class="item">Services 🍜</li>
-    <li ref="delay3" class="item">Company 🏢</li>
+  <ul class="messages">
+    <li ref="delay0" class="item">products📱</li>
+    <li ref="delay1" class="item">team 🐶🐹</li>
+    <li ref="delay2" class="item">services 🍜</li>
+    <li ref="delay3" class="item">company 🏢</li>
   </ul>
 </template>
 
@@ -110,29 +110,4 @@ export default {
 .item
   opacity: 0
   position: absolute
-</style>
-
-<style lang="sass">
-.animation
-  animation: animate 4000ms ease-in-out 0ms infinite
-
-@keyframes animate
-  0%
-    opacity: 0
-  5%
-    opacity: 0
-    transform: translateY(-5px)
-  10%
-    opacity: 1
-    transform: translateY(0px)
-  25%
-    opacity: 1
-    transform: translateY(0px)
-  30%
-    opacity: 0
-    transform: translateY(10px)
-  80%
-    opacity: 0
-  100%
-    opacity: 0
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <article>
-      <LinkButton url="index" />
+      <LinkButton url="index" text="backToHome" />
       <header class="header">
         <SanityImage
           v-if="post.mainImage"
@@ -102,4 +102,9 @@ export default {
     margin: 0 0 2.4rem 0
   .label
     font-weight: 700
+
+@media only screen and (min-width: 48em)
+  .list
+    max-width: 720px
+    margin: 0 auto
 </style>

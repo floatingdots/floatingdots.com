@@ -1,8 +1,6 @@
 <template>
   <section class="careers">
-    <!-- <LinkButton
-      url="/"
-    /> -->
+    <LinkButton class="back" text="backToHome" url="index" />
     <h1 class="title">
       Let's build great products<br />
       and careers together.
@@ -62,7 +60,7 @@
 <script>
 import { sanity } from '@/plugins/sanity'
 import SanityImage from '@/components/SanityImageLQIP'
-// import LinkButton from '@/components/LinkButton'
+import LinkButton from '@/components/LinkButton'
 
 const queryImaegs = `
   *[_type == 'media' && 'careers' in page && !(_id in path("drafts.**"))]{
@@ -86,11 +84,14 @@ export default {
   },
   components: {
     SanityImage,
+    LinkButton,
   },
 }
 </script>
 
 <style lang="sass" scoped>
+.back
+  margin-bottom: 4rem
 h1.title,
 .title.open
   +font-mobile-xxlarge
@@ -128,7 +129,12 @@ h1.title,
     .title
       +font-mobile-slarge
 @media only screen and (min-width: 48em)
+  .heading
+    +font-desktop-xxlarge
+  .back
+    margin-bottom: 8rem
   h1.title,
   .item
     max-width: 640px
+    +font-desktop-xxlarge
 </style>

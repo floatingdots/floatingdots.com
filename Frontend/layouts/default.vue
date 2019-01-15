@@ -14,7 +14,6 @@ import Nuxt from '@/.nuxt/components/nuxt'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import NavMobile from '@/components/NavMobile'
-// import FloatingDots from '@/components/FloatingDots'
 
 export default {
   components: {
@@ -22,7 +21,6 @@ export default {
     Header,
     Footer,
     NavMobile,
-    // FloatingDots,
   },
   methods: {},
 }
@@ -31,30 +29,6 @@ export default {
 <style lang="sass" scoped>
 #app
   background: #fafafa
-.dot
-  display: none
-  z-index: 0
-  position: absolute
-  background: $black
-  border-radius: 1000px
-  animation: animate 20s ease-in infinite
-@keyframes animate
-  0%
-    transform: translateY(0)
-    opacity: 0
-  10%
-    opacity: 1
-    transform: translateY(-50px)
-  30%
-    transform: translateY(-20px)
-  70%
-    transform: translateY(-40px)
-  90%
-    opacity: 1
-    transform: translateY(0px)
-  100%
-    opacity: 0
-    transform: translateY(-100px)
 </style>
 
 <style lang="sass">
@@ -71,6 +45,7 @@ p
 a
   transition: all 0.15s ease
   color: $black
+  word-break: break-word
   &:hover
     text-decoration: none
     opacity: 0.7
@@ -133,8 +108,9 @@ main
   filter: blur(0px)
   opacity: 1
   transition: opacity 200ms ease-out, filter 500ms ease
-  margin-top: 4.0rem
+  padding-top: 4.0rem
   .inner
+    margin: 0 auto
     padding: 64px $spacing-mobile 0 $spacing-mobile
   &.inactive
     filter: blur(20px)
@@ -144,14 +120,13 @@ main
   br.mobile
     display: none
   main
+    padding-top: 8.0rem
     .inner
       padding: 64px $spacing-desktop 0 $spacing-desktop
-      margin: 6.4rem auto 0 auto
       max-width: 1024px
-      margin: 0 auto
   .fullwidth-inner
     max-width: 1024px
     padding: 0 $spacing-desktop
   hr
-    margin: 6.0rem 0
+    margin: 12.8rem 0
 </style>

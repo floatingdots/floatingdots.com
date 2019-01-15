@@ -38,7 +38,7 @@ nav.mobile
   height: calc(100vh - 64px)
   overflow: hidden
   overflow-y: auto
-  padding: 0 $spacing-mobile
+  padding: 0 32px
   padding-bottom: 4rem
   pointer-events: none
   transition: all 200ms ease-out 0ms
@@ -48,18 +48,17 @@ nav.mobile
     transition: all 200ms ease-out 40ms
   ul
     list-style: none
-    margin: 8rem 0 0 0
+    margin: 8rem 0
     padding: 0
     text-align: right
   li:not(:last-child)
     margin: 0 0 4.0rem 0
   a
+    +font-mobile-xxlarge
     color: $black
     text-decoration: none
     display: block
-    font-size: 3.2rem
-    font-weight: 500
-    line-height: 1
+
   ul.lang-switcher
     margin-top: 8rem
 div.divider
@@ -73,4 +72,8 @@ div.divider
       margin: 0 auto
       padding: 0 32px
       display: block
+    ul
+      margin-bottom: 12rem
+    a
+      +font-desktop-xxlarge
 </style>
