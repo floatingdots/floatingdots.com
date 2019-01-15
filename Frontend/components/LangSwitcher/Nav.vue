@@ -1,11 +1,12 @@
 <template>
   <div>
-    <label>Language - 言語</label>
+    <label>Language</label>
     <ul class="lang-switcher">
       <li
         v-for="locale in $i18n.locales"
         :key="locale.code"
         :class="{ current: locale.code === $i18n.locale }"
+        @click="closeNav"
       >
         <nuxt-link :to="switchLocalePath(locale.code)"> {{ locale.name }} </nuxt-link>
       </li>
@@ -16,6 +17,11 @@
 <script>
 export default {
   name: 'LangSwitcher',
+  methods: {
+    closeNav() {
+      return this.$store.commit('closeMobileNav')
+    },
+  },
 }
 </script>
 
@@ -30,10 +36,10 @@ label
   color: $black
   text-decoration: none
 label
-  +font-mobile-medium
+  +font-mobile-large
   font-weight: 700
-  padding: 0 0 1.6rem 0
   display: block
+  margin-bottom: 3.2rem
 li
   margin-bottom: 1.6rem
   a
@@ -43,4 +49,8 @@ li
     a
       pointer-events: none
       font-weight: 700
+
+@media only screen and (min-width: 48em)
+  label
+    +font-desktop-large
 </style>

@@ -1,62 +1,94 @@
 <template>
-  <article v-if="post.title[$i18n.locale]">
-    <header>
-      <h1>{{ post.title[$i18n.locale] }}</h1>
-      <ul class="categories">
-        <li v-for="(category, i) in post.categories" :key="i">
-          <NuxtLink :to="`tag/${category.slug.current}`">
-            <Tag :name="category.title[$i18n.locale]" />
-          </NuxtLink>
-        </li>
-      </ul>
-    </header>
-    <div>{{ bodyHtml }}</div>
-  </article>
+  <div>
+    <article>
+      <LinkButton url="/" />
+      <header class="header">
+        <SanityImage
+          v-if="post.thumbnail"
+          :image="post.thumbnail"
+          :w="400"
+          :sizes="{
+            l: { media: 0, width: 1024 },
+            m: { media: 0, width: 800 },
+            s: { media: 0, width: 400 },
+          }"
+          :alt="post.thumbnail.alt"
+          class="thumbnail"
+          role="presentation"
+          fit="clip"
+        />
+        <h1 class="title">{{ post.title[$i18n.locale] }}</h1>
+      </header>
+      <hr />
+
+      <div class="content">
+        <ul class="list">
+          <li class="cat">
+            <span class="label"> Categories: </span>
+            <span class="text"> {{ post.Categories }} </span>
+          </li>
+        </ul>
+        <hr />
+        <Body :content="post.body" />
+      </div>
+    </article>
+    <hr />
+
+    <Contact />
+  </div>
 </template>
 
 <script>
 import { sanityPreview } from '@/plugins/sanity'
-import blocksToHtml from '@sanity/block-content-to-html'
+import LinkButton from '@/components/LinkButton'
+import Body from '@/components/Body'
+import SanityImage from '@/components/SanityImage'
+import Contact from '@/components/Contact'
 
 const queryPost = `
-  *[_type == 'blog' && _id == $id ]{
-    ...,
-  }[0]
-`
+  *[_type == 'blog' && _id == $id]{
+    ...
+  }[0]`
 
 export default {
   async asyncData(context) {
     const post = await sanityPreview.fetch(queryPost, context.route.params)
     return { post }
   },
-  components: {},
-  data() {
-    return {
-      body: false,
-    }
+  components: {
+    LinkButton,
+    Body,
+    SanityImage,
+    Contact,
   },
-  computed: {
-    bodyHtml() {
-      if (!this.post || !this.post.body) {
-        return '…'
-      }
-      return blocksToHtml({
-        blocks: this.post.body[this.$i18n.locale],
-        dataset: sanityPreview.clientConfig.dataset,
-        projectId: sanityPreview.clientConfig.projectId,
-        imageOptions: { w: this.width, h: this.height, fit: 'max' },
-      })
-    },
-  },
-  methods: {},
 }
 </script>
 
-<style lang="sass">
-article
-  ul
-    list-style: outside
-    margin: 0 0 4.8rem 2.4rem
-</style>
+<style lang="sass" scoped>
+.header
+  margin: 4rem 0 0 0
+.mainImage
+  margin: 0 0 4rem 0
+.title
+  +font-mobile-xxlarge
+  margin-top: 0
+.subtitle
+  +font-mobile-slarge
+  margin: 0 0 6.4rem 0
 
-<style lang="sass" scoped></style>
+.list
+  list-style: none
+  margin: 0
+  +font-mobile-base
+  font-weight: 500
+  .item
+    display: flex
+    flex-direction: column
+    margin: 0 0 2.4rem 0
+  .label
+    font-weight: 700
+
+@media only screen and (min-width: 48em)
+  .content
+    max-width: 768px
+</style>

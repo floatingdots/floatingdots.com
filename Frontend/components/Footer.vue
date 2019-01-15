@@ -17,7 +17,7 @@
               <a href="mailto:hello@floatingdots.com"> hello@floatingdots.com </a>
             </li>
             <li class="address">
-              <a href="https://maps.google.com/">
+              <a href="https://maps.google.com/" target="_blank" rel="nofollow,noopener">
                 25 W 39th St, Floor 10<br />
                 New York, NY 10018
               </a>
@@ -32,7 +32,7 @@
 
 <style lang="sass" scoped>
 .footer
-  margin-top: 4rem
+  margin-top: 8rem
   padding: 1.6rem $spacing-mobile
   background: $black
 .container
@@ -41,11 +41,11 @@
     margin: 0 0 8rem 0
   li
     margin: 0 0 4rem 0
-    a
-      +font-mobile-slarge
-      font-weight: 700
-      color: $white
-      text-decoration: none
+  a
+    +font-mobile-large
+    font-weight: 700
+    color: $white
+    text-decoration: none
   &.inactive
     display: none
 .copyright
@@ -55,6 +55,7 @@
 
 @media only screen and (min-width: 48em)
   .footer
+    margin-top: 14rem
     padding: 1.6rem $spacing-desktop
   .container
     max-width: 1024px
@@ -62,6 +63,8 @@
     padding: 8rem $spacing-desktop 2.4rem $spacing-desktop
     ul
       margin: 0 0 4rem 0
+    a
+      +font-desktop-large
   .columns
     display: flex
     flex-direction: row

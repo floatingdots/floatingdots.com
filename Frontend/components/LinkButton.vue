@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="localePath('index')">
+  <nuxt-link class="link" :to="localePath(url)">
     <ElButton class="button" type="plain" icon="el-icon-back"> {{ $t(text) }} </ElButton>
   </nuxt-link>
 </template>
@@ -13,13 +13,15 @@ export default {
     },
     text: {
       type: String,
-      default: 'Back',
+      default: 'back',
     },
   },
 }
 </script>
 
 <style lang="sass" scoped>
+.link
+  display: block
 .button
   background: transparent
 </style>
