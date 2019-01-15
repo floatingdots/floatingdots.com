@@ -22,6 +22,7 @@ const store = () =>
     },
     actions: {},
     getters: {
+      isMobileNav: state => state.isMobileNav,
       windowWidth: state => state.windowWidth,
     },
   })
