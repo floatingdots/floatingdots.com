@@ -31,6 +31,11 @@ export default {
                 name: 'href',
                 type: 'url',
               },
+              {
+                title: '_blank',
+                name: 'blank',
+                type: 'boolean',
+              },
             ],
           },
         ],
