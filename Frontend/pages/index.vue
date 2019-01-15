@@ -291,7 +291,7 @@ export default {
   .posts
     display: flex
     flex-direction: column
-  .post
+  .post:not(:last-child)
     margin-bottom: 8.0rem
   .link
     text-decoration: none
