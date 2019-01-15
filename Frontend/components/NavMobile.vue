@@ -23,6 +23,21 @@ export default {
   components: {
     LangSwitcher,
   },
+  mounted() {
+    const html = document.documentElement
+    this.$store.watch(
+      state => state.isMobileNav,
+      isMobileNav => {
+        if (isMobileNav) {
+          html.style.height = '100vh'
+          html.style.overflowY = 'hidden'
+        } else {
+          html.style.height = 'auto'
+          html.style.overflowY = 'auto'
+        }
+      }
+    )
+  },
 }
 </script>
 
@@ -38,6 +53,7 @@ nav.mobile
   height: calc(100vh - 64px)
   overflow: hidden
   overflow-y: auto
+  -webkit-overflow-scrolling: touch
   padding: 0 32px
   padding-bottom: 4rem
   pointer-events: none
@@ -48,7 +64,7 @@ nav.mobile
     transition: all 200ms ease-out 40ms
   ul
     list-style: none
-    margin: 8rem 0
+    margin: 2.4rem 0 8rem 0
     padding: 0
     text-align: right
   li:not(:last-child)
