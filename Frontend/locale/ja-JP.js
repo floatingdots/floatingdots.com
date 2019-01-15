@@ -1,4 +1,7 @@
 module.exports = {
+  back: '戻る',
+  backToBlogList: 'ブログ一覧へ戻る',
+  backToHOme: 'ホームへ戻る',
   contactus: 'お問い合わせ',
   nav: {
     studio: {
@@ -10,10 +13,10 @@ module.exports = {
       title: 'Projects',
       hash: '#projects',
     },
-    // blog: {
-    //   href: 'blog',
-    //   title: 'Blog',
-    // },
+    blog: {
+      href: 'blog',
+      title: 'Blog',
+    },
     contact: {
       href: 'contact',
       title: 'Contact',
