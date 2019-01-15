@@ -229,6 +229,7 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/axios',
+    ['@nuxtjs/moment', ['ja']],
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
