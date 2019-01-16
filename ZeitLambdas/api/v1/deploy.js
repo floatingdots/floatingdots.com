@@ -5,7 +5,7 @@ const router = express.Router()
 
 const headers = { 'Content-Type': 'application/json' }
 const dataString = {
-  build_parameters: { CIRCLE_JOB: 'frontend' },
+  build_parameters: { CIRCLE_JOB: 'deploy_frontend' },
 }
 const options = {
   url:
@@ -14,12 +14,12 @@ const options = {
   headers: headers,
   data: dataString,
   auth: {
-    username: process.env.CIRCLECI_APIKEY,
+    username: process.env.CIRCLECI_TOKEN,
     password: '',
   },
 }
 
-router.get('/', (req, res) => {
+router.post('/', (req, res) => {
   if (req.query.deploykey === process.env.DEPLOY_KEY) {
     axios(options)
       .then(ress => {

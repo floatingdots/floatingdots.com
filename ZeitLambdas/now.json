@@ -11,6 +11,8 @@
   "env": {
     "POSTMARK_ACCESSTOKEN": "@fd-postmark-accesstoken",
     "EMAIL_RECEIVER": "@fd-email-receiver",
-    "EMAIL_SENDER": "@fd-email-sender"
+    "EMAIL_SENDER": "@fd-email-sender",
+    "CIRCLECI_TOKEN": "@fd-circleci-token",
+    "DEPLOY_KEY": "@fd-deploy-key"
   }
 }
