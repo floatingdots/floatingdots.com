@@ -1,7 +1,7 @@
 module.exports = {
   back: '戻る',
   backToBlogList: 'ブログ一覧へ戻る',
-  backToHOme: 'ホームへ戻る',
+  backToHome: 'ホームへ戻る',
   contactus: 'お問い合わせ',
   nav: {
     studio: {
