@@ -15,7 +15,7 @@ export default ({ app }) => {
   /*
   ** Set the current page
   */
-  ga('create', process.env.googleAnaliticsId, 'auto')
+  ga('create', process.env.googleAnalyticsId, 'auto')
   /*
   ** Every time the route changes (fired on initialization too)
   */
