@@ -22,7 +22,7 @@ module.exports = {
     sanityId: process.env.SANITY_ID,
     sanityTokenPreview: process.env.SANITY_TOKEN_PREVIEW,
     googleMapsApi: process.env.GOOGLE_MAPS_API,
-    googleAnaliticsId: process.env.GOOGLE_MAPS_API,
+    googleAnalyticsId: process.env.GA_ID,
     googleRecaptchaSitekey: process.env.GOOGLE_RECAPTCHA_SITEKEY,
   },
   loading: { color: '#121314' },
