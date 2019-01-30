@@ -52,7 +52,6 @@
     "normalize.css": "^8.0.1",
     "nuxt": "^2.3.2",
     "nuxt-i18n": "^5.4.4",
-    "nuxt-sass-resources-loader": "^2.0.5",
     "sanity-blocks-vue-component": "^0.1.0",
     "sass-loader": "^7.1.0",
     "vee-validate": "^2.1.3",
