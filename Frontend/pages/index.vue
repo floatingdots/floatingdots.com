@@ -168,7 +168,6 @@
 </template>
 
 <script>
-import NuxtLink from '@/.nuxt/components/nuxt-link'
 import { sanity } from '@/plugins/sanity'
 import SanityImage from '@/components/SanityImageLQIP'
 import Contact from '@/components/Contact'
@@ -200,7 +199,6 @@ export default {
     return { projects, blog }
   },
   components: {
-    NuxtLink,
     SanityImage,
     Contact,
     Rotation,
