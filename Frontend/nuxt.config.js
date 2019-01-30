@@ -227,14 +227,17 @@ module.exports = {
     // '@/plugins/googleMaps',
     // { src: '@plugins/hotjar.js', ssr: false },
   ],
+  styleResources: {
+    sass: ['@/assets/styles/variables.sass'],
+  },
   modules: [
     '@nuxtjs/axios',
     ['@nuxtjs/moment', ['ja']],
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
+    '@nuxtjs/style-resources',
     ['nuxt-i18n', i18n],
-    ['nuxt-sass-resources-loader', ['@/assets/styles/variables.sass']],
   ],
   build: {
     extend(config, { isDev, isClient }) {
