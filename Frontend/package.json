@@ -32,6 +32,9 @@
       ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
     }
   },
+  "resolutions": {
+    "terser": "3.14.1"
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.3.0",
@@ -50,7 +53,7 @@
     "lazysizes": "^4.1.4",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.3.2",
+    "nuxt": "^2.4.2",
     "nuxt-i18n": "^5.4.4",
     "sanity-blocks-vue-component": "^0.1.0",
     "sass-loader": "^7.1.0",
