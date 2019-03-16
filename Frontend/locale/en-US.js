@@ -8,11 +8,11 @@ module.exports = {
       href: 'studio',
       title: 'Studio',
     },
-    projects: {
-      href: 'index',
-      title: 'Projects',
-      hash: '#projects',
-    },
+    // projects: {
+    //   href: 'index',
+    //   title: 'Projects',
+    //   hash: '#projects',
+    // },
     blog: {
       href: 'blog',
       title: 'Blog',
@@ -32,11 +32,11 @@ module.exports = {
     weLove: '<span class="small">We love</span><br>design, technology, and business.',
   },
   studio: {
-    heading: 'We help companies design and develop f or <br>products, services and businesses.',
+    heading: 'We help companies design and develop for <br>products, services and businesses.',
     sketch: {
       title: 'From sketch <br class="mobile">to product',
       text:
-        "We're a design agency that sketches from your idea and builds real products from it.<br>We design ideas, interfaces, visuals, and codes.<br><br sa >To make a great product both design and development are essential.<br>Everything is made with code in the digital world.",
+        "We're a design agency that sketches from your idea and builds real products from it.<br>We design ideas, interfaces, visuals, and codes.<br>To make a great product both design and development are essential.<br>Everything is made with code in the digital world.",
     },
     harmony: {
       title: 'Harmony with <br >design, tech,<br class="mobile">and business',

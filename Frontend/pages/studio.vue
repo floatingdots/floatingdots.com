@@ -133,7 +133,7 @@ export default {
     +font-mobile-xxlarge
   .bottom
     .text
-      +font-mobile-slarge
+      +font-mobile-medium
       font-weight: 500
       max-width: 80%
     .image

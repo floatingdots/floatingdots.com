@@ -8,11 +8,11 @@ module.exports = {
       href: 'studio',
       title: 'Studio',
     },
-    projects: {
-      href: 'index',
-      title: 'Projects',
-      hash: '#projects',
-    },
+    // projects: {
+    //   href: 'index',
+    //   title: 'Projects',
+    //   hash: '#projects',
+    // },
     blog: {
       href: 'blog',
       title: 'Blog',
@@ -32,6 +32,26 @@ module.exports = {
       'デザインとテクノロジーを活用して、<br>プロダクト・サービス・ビジネスの拡大を実現します。',
     weLove: '<span class="small">We love</span><br>design, technology, and business.',
   },
+  studio: {
+    heading:
+      'デザインとテクノロジーを活用して、<br>プロダクト・サービス・ビジネスの拡大を実現します。',
+    sketch: {
+      title: 'スケッチから製品まで',
+      text:
+        'UXデザイン・デザイン思考・テクノロジーをベースに問題点を発見し、それを解決するプロダクトを作り出します。私たちはコンサルティングファームでも制作会社でもありません。',
+    },
+    harmony: {
+      title: '役割にとらわれないからできること',
+      text:
+        '私たちのバックグラウンドは様々です。多種多様な経験の組み合わせが複雑な現代社会で成功するプロダクトを創り出すためのキーポイントです。',
+    },
+    analog: {
+      title: 'アナログ・デジタル・AIみんなと仲良く',
+      text:
+        'AIなど新しい技術も大切ですが、アナログな手法も忘れてはいけません。常識や決まりにとらわれずに最適な解決方法を見つけ出します。',
+    },
+    talk: 'Let’s talk<br> about your project.',
+  },
   contact: {
     heading: 'Have a project for us? or Just say hi?',
   },
@@ -39,24 +59,24 @@ module.exports = {
     unavailable: '現在募集中の求人はありません。',
     list: {
       autonomy: {
-        title: 'Complete Autonomy',
+        title: '全てはあなた次第',
         text:
-          "Feel free to work the hours that suit you best. Don't need to work on the day that your favorite game is released, the next day that you dance till morning, or the day that upcoming Star Wars is released. ",
+          '大切なのは自信を持って披露できるプロダクトを作り、それがクライアントに利益をもたらすことです。いつどれだけ働くかはあなた次第。ゲームの発売日やライブの日には上の空仕事をせずに思いっきり楽しみましょう。',
       },
       learn: {
-        title: 'Learn New Things',
+        title: '常に自分をレベルアップする',
         text:
-          'Want to get new skills? Want to be a designer who can code react and vue? We support to build your career. Keep learnin, Keep growthing beyond the role. ',
+          'プロダクトのバージョンだけではなく自分のバージョンもアップデートさせましょう。デザイン・ビジネス・テクノロジーといった領域を超えたスキルの習得も大歓迎です。',
       },
       remote: {
-        title: 'Remote Friendly',
+        title: 'リモートフレンドリー',
         text:
-          'Work from whenever you want, wherever you want. Want to come back to your country for a month? Yep. Say hello to your family and friends. ',
+          'オフィスでも自宅でも好きな場所で仕事をしてください。大切なのは意思疎通やコミュニケーションを取ることで、同じ場所で働くことではありません。',
       },
       vacation: {
-        title: 'Unlimited Vacation',
+        title: '自由休暇制度',
         text:
-          "Take vacation time whenever you need it. You just tell us that when you come back. Don't disappear suddenly. We'are waiting for you and your vacation story.",
+          'あなたが休みたいと思った時が休みです。好きな時に好きなだけ休んでリフレッシュしましょう！蓄えたエネルギーがより良いプロダクトを作り出す原動力になるはずです。',
       },
     },
   },
