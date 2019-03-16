@@ -228,7 +228,7 @@ module.exports = {
     // { src: '@plugins/hotjar.js', ssr: false },
   ],
   styleResources: {
-    sass: ['@/assets/styles/variables.sass'],
+    sass: ['@/assets/styles/_variables.sass'],
   },
   modules: [
     '@nuxtjs/axios',

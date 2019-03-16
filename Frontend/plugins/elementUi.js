@@ -14,7 +14,7 @@ import {
 } from 'element-ui'
 import localeEn from 'element-ui/lib/locale/lang/en'
 import localeJa from 'element-ui/lib/locale/lang/ja'
-import '@/assets/styles/element.sass'
+import '@/assets/styles/_element.sass'
 
 const myElements = [
   Button,
