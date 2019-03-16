@@ -8,11 +8,11 @@ module.exports = {
       href: 'studio',
       title: 'Studio',
     },
-    projects: {
-      href: 'index',
-      title: 'Projects',
-      hash: '#projects',
-    },
+    // projects: {
+    //   href: 'index',
+    //   title: 'Projects',
+    //   hash: '#projects',
+    // },
     blog: {
       href: 'blog',
       title: 'Blog',
