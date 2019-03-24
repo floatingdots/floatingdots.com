@@ -2,7 +2,7 @@ export default {
   back: '戻る',
   backToBlogList: 'ブログ一覧へ戻る',
   backToHome: 'ホームへ戻る',
-  backToCareers: 'Careersへ戻る',
+  backToCareers: 'キャリアへ戻る',
   contactus: 'お問い合わせ',
   nav: {
     studio: {
