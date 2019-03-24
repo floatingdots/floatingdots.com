@@ -1,3 +1,5 @@
+import { MdMail } from 'react-icons/md'
+
 export default {
   title: 'Block Content',
   name: 'blockContent',
@@ -35,6 +37,21 @@ export default {
                 title: '_blank',
                 name: 'blank',
                 type: 'boolean',
+              },
+            ],
+          },
+          {
+            title: 'Mail To',
+            name: 'mailTo',
+            type: 'object',
+            blockEditor: {
+              icon: MdMail
+            },
+            fields: [
+              {
+                title: 'Email',
+                name: 'email',
+                type: 'string',
               },
             ],
           },
