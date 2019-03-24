@@ -5,8 +5,8 @@
   "author": "Naoto Yoshimoto <n@floatingdots.com>",
   "private": true,
   "scripts": {
-    "now-build": "nuxt generate",
-    "build:netlify": "yarn && nuxt generate",
+    "now-build": "yarn run generate",
+    "build:netlify": "yarn && yarn run generate",
     "deploy:production": "nuxt generate && cd dist && now && now alias floatingdots.com",
     "deploy:staging": "nuxt generate && cd dist && now && now alias staging.floatingdots.com",
     "dev": "HOST=0.0.0.0 nuxt",
