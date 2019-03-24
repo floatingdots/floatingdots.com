@@ -29,7 +29,7 @@ export default {
         blocks: this.content[this.$i18n.locale],
         serializers: {
           types: { image: this.ImageRender },
-          marks: { link: this.link },
+          marks: { link: this.link, mailTo: this.email },
         },
         dataset: sanity.clientConfig.dataset,
         projectId: sanity.clientConfig.projectId,
@@ -47,6 +47,15 @@ export default {
       } else {
         return h('a', { href: props.mark.href }, props.children)
       }
+    },
+    email(props) {
+      return h(
+        'a',
+        {
+          href: `mailto:${props.mark.email}`,
+        },
+        props.children
+      )
     },
     ImageRender(props) {
       return h('picture', {}, [
