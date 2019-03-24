@@ -6,7 +6,7 @@ const i18n = require('./plugins/i18n')
 const urls = async function getUrls() {
   const paths = await sanity.fetch(`{
     "projects": *[_type == "projects" && availability].slug.current,
-    "blog": *[_type == "blog" && availability].slug.current
+    "blog": *[_type == "blog" && availability].slug.current,
     "careers": *[_type == "careers" && availability].slug.current
     }`)
   return Object.keys(paths).reduce(
