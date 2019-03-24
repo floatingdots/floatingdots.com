@@ -101,6 +101,8 @@ export default {
     +font-mobile-base
   p
     margin: 0 0 4rem 0
+  h4
+    margin-bottom: 0.8rem
 @media only screen and (min-width: 48em)
   .content--bodyHtml
     max-width: 720px
