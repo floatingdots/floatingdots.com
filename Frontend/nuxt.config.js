@@ -136,6 +136,11 @@ module.exports = {
     fallback: true,
     routes: urls,
   },
+  render: {
+    compressor: {
+      threshold: 9,
+    },
+  },
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://floatingdots.com',
