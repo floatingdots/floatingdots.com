@@ -1,7 +1,8 @@
-module.exports = {
+export default {
   back: 'Back',
   backToBlogList: 'Back to blog list',
   backToHome: 'Back to home',
+  backToCareers: 'Back to Careers list',
   contactus: 'Contact Us',
   nav: {
     studio: {
