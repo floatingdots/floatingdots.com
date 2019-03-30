@@ -18,7 +18,7 @@
             </li>
             <li class="address">
               <a href="https://maps.google.com/" target="_blank" rel="nofollow,noopener">
-                25 W 39th St, Floor 10<br />
+                25 W 39th St, Floor 7<br />
                 New York, NY 10018
               </a>
             </li>
