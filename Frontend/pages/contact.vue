@@ -12,7 +12,7 @@
       <span class="title"> Office </span>
       <div class="location">
         <span class="address">
-          25 W 39th St, Floor 10,<br />
+          25 W 39th St, Floor 7,<br />
           New York, NY 10018
         </span>
         <a
