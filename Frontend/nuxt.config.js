@@ -1,3 +1,5 @@
+global.HTMLElement = typeof window === 'undefined' ? Object : window.HTMLElementßß
+
 require('dotenv').config()
 import { sanity } from './plugins/sanity'
 
