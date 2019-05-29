@@ -4,9 +4,10 @@
     <h1 class="heading">{{ $t('contact.heading') }}</h1>
     <Form class="form" />
     <div class="email">
-      <span class="or">
-        or email us at <a href="mailto:hello@floatingdots.com"> hello@floatingdots.com </a>
-      </span>
+      <span class="or">or</span>
+      <span class="emailUs"
+        >Email us at <a href="mailto:hello@floatingdots.com"> hello@floatingdots.com </a></span
+      >
     </div>
     <div class="office">
       <span class="title"> Office </span>
@@ -61,6 +62,10 @@ export default {
   span
     line-height: 1.4
     +font-mobile-medium
+.or,
+.emailUs
+  padding-top: 1.6rem
+  display: block
 .location
   span,
   a
