@@ -58,7 +58,7 @@ export default {
   },
   data() {
     return {
-      sitekey: process.env.GOOGLE_RECAPTCHA_SITEKEY,
+      sitekey: process.env.googleRecaptchaSitekey,
       button: 'Send Message',
       isSubmitting: false,
       isDisable: false,
