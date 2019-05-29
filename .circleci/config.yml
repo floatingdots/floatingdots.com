@@ -33,9 +33,8 @@ jobs:
           name: Deploy & Alias
           command: |
             cd Frontend
-            echo ${ENV} | base64 --decode > .env
             now -f -t ${ZEIT_TOKEN} --scope floatingdots
-            now alias -t ${ZEIT_TOKEN} --scope floatingdots
+            now alias staging.floatingdots.com -t ${ZEIT_TOKEN} --scope floatingdots
 workflows:
   version: 2
   frontend:

@@ -13,6 +13,14 @@
   ],
   "regions": ["all"],
   "public": false,
+  "build": {
+    "env": {
+      "GOOGLE_RECAPTCHA_SITEKEY": "@fd-google-recaptcha-sitekey",
+      "SANITY_TOKEN_PREVIEW": "@fd-sanity-token-preview",
+      "SANITY_ID": "5ckaios9",
+      "GA_ID": "UA-114705592-1"
+    }
+  },
   "routes": [
     {
       "src": "/_nuxt/(.*)",
