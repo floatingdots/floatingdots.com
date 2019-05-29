@@ -34,6 +34,7 @@ jobs:
           command: |
             cd Frontend
             echo ${ENV} | base64 --decode > .env
+            echo ${ENV} | base64 --decode > .env.build
             now -f -t ${ZEIT_TOKEN} --scope floatingdots
             now alias -t ${ZEIT_TOKEN} --scope floatingdots
 workflows:
