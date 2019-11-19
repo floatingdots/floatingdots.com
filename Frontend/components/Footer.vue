@@ -17,9 +17,13 @@
               <a href="mailto:hello@floatingdots.com"> hello@floatingdots.com </a>
             </li>
             <li class="address">
-              <a href="https://maps.google.com/" target="_blank" rel="nofollow,noopener">
-                25 W 39th St, Floor 7<br />
-                New York, NY 10018
+              <a
+                href="https://goo.gl/maps/nkV7YcpUXHkzbWEs5"
+                target="_blank"
+                rel="nofollow,noopener"
+              >
+                530 Fifth Ave, Floor 9<br />
+                New York, NY 10036
               </a>
             </li>
           </ul>

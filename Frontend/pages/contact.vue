@@ -6,19 +6,19 @@
     <div class="email">
       <span class="or">or</span>
       <span class="emailUs"
-        >Email us at <a href="mailto:hello@floatingdots.com"> hello@floatingdots.com </a></span
+        >Email us at <a href="mailto:hi@floatingdots.com"> hello@floatingdots.com </a></span
       >
     </div>
     <div class="office">
       <span class="title"> Office </span>
       <div class="location">
         <span class="address">
-          25 W 39th St, Floor 7,<br />
-          New York, NY 10018
+          530 Fifth Ave, Floor 9<br />
+          New York, NY 10036
         </span>
         <a
           rel="nofollow,noopener"
-          href="https://goo.gl/maps/3iz6SA8TC162"
+          href="https://goo.gl/maps/nkV7YcpUXHkzbWEs5"
           target="_blank"
           class="open"
         >

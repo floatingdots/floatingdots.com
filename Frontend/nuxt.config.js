@@ -1,4 +1,4 @@
-global.HTMLElement = typeof window === 'undefined' ? Object : window.HTMLElementßß
+global.HTMLElement = typeof window === 'undefined' ? Object : window.HTMLElement
 
 require('dotenv').config()
 import { sanity } from './plugins/sanity'
@@ -20,7 +20,8 @@ const urls = async function getUrls() {
   )
 }
 
-module.exports = {
+export default {
+  mode: 'universal',
   env: {
     sanityId: process.env.SANITY_ID,
     sanityTokenPreview: process.env.SANITY_TOKEN_PREVIEW,
