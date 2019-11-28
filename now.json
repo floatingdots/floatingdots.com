@@ -24,8 +24,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Frontend/$1",
-      "continue": true
+      "dest": "Frontend/$1"
     },
     {
       "src": "/_nuxt/.*",
@@ -46,16 +45,18 @@
       }
     },
     {
-    "src": "/favicon.ico",
-    "headers": {
-      "cache-control": "public, max-age=31536000, immutable"
-    }
-  },
-  {
+      "src": "/favicon.ico",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
       "src": "sw.js",
       "headers": {
         "cache-control": "no-cache, no-store"
       }
-    }
+    },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "Frontend/404.html" }
   ]
 }
