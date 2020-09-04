@@ -52,7 +52,7 @@
     "element-ui": "^2.9.1",
     "image-size": "^0.7.4",
     "lazysizes": "^5.1.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "nuxt": "2.8.0",
     "nuxt-i18n": "^5.12.3",
